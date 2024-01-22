@@ -15,4 +15,8 @@ public class AppFile {
     UnknownType,
     Google;
   }
+
+  public String getUniqueId() {
+    return path + name + id;
+  }
 }
