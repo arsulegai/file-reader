@@ -1,6 +1,5 @@
 package com.arsulegai.filereader.exception;
 
-
 public class NoImplementationFoundException extends BaseException {
   public NoImplementationFoundException(ErrorCode code, String message) {
     super(code, message);
