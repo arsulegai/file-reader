@@ -1,0 +1,28 @@
+version: "3.6"
+
+networks:
+  test:
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    container_name: elasticsearch
+    ports:
+      - 9200:9200
+    expose:
+      - 9200
+    networks:
+      - test
+
+  file-reader:
+    build:
+      context: .
+    container_name: file-reader
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+    volumes:
+      - ./config/container-app-config.yml:/usr/local/config/application.yml
+    networks:
+      - test

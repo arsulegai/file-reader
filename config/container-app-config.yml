@@ -1,0 +1,13 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: elasticsearch:9200
+datasource:
+  google:
+    connection:
+      # these are defined by google
+      rootFolder: root
+      connectionJson: src/main/resources/mySecrets.json
+storage:
+  google: true
